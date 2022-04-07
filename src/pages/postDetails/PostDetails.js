@@ -14,6 +14,10 @@ const PostDetails = () => {
       .then(resultJSON => setPostDetails(resultJSON))
   }, [id])
 
+  const toggleShowComments = () => {
+    setShowComments(prevState => !prevState);
+  }
+
   return (
     <div className="content">
       <h3>PostDetails</h3>
@@ -22,9 +26,16 @@ const PostDetails = () => {
         <p style={{fontSize: "1.15rem"}}>{postDetails.body}</p>
         <p style={{fontSize: "1rem"}}>by userID: {postDetails.userId}</p>
       </div>
-      <Link to='comments'>
-        <button>show comments</button>
-      </Link>
+      {showComments ? (
+            <Link to=''>
+              <button className="link shadow shadow-hover" style={{float: "left"}} onClick={toggleShowComments}>hide comments</button>
+            </Link>
+          ) : (
+            <Link to='comments'>
+              <button className="link shadow shadow-hover" style={{float: "left"}} onClick={toggleShowComments}>show comments</button>
+            </Link>
+          )
+      }
       <Routes>
         <Route path='comments' element={<Comments />} />
       </Routes>

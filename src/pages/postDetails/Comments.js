@@ -15,7 +15,7 @@ const Comments = () => {
     return (
         <div>
             <h3>Comments</h3>
-            <div class="comments shadow">
+            <div className="comments shadow">
                 {comments.map(comment => {
                     return(
                         <div key={comment.id} className="comment">
