@@ -5,8 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact'
 import Posts from './pages/Posts';
-import PostDetails from './pages/PostDetails';
-// import Experiment from './pages/Experiment';
+import PostDetails from './pages/postDetails/PostDetails';
 
 // TODO: make it responsive
 
@@ -28,9 +27,6 @@ function App() {
           <Link to='/posts'>
             <button className="link shadow-hover">Posts</button>
           </Link>
-          {/* <Link to='/experiment'>
-            <button className="link shadow-hover">Experiment</button>
-          </Link> */}
         </nav>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -38,7 +34,6 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/posts' element={<Posts />} />
           <Route path='/posts/:id/*' element={<PostDetails />} />
-          {/* <Route path='/experiment' element={<Experiment />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
