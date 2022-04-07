@@ -19,8 +19,8 @@ const PostDetails = () => {
       <h3>PostDetails</h3>
       <div className="post shadow">
         <h4>{postDetails.title}</h4>
-        <p>{postDetails.body}</p>
-        <p>by userID: {postDetails.userId}</p>
+        <p style={{fontSize: "1.15rem"}}>{postDetails.body}</p>
+        <p style={{fontSize: "1rem"}}>by userID: {postDetails.userId}</p>
       </div>
       <Link to='comments'>
         <button>show comments</button>

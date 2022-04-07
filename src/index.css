@@ -91,3 +91,17 @@ nav h1 {
 .post-hover:hover {
   transform: translateY(-10px);
 }
+
+.comments {
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 5px 25px;
+}
+
+.comment {
+  border-bottom: 2px solid #ccc;
+}
+
+.comment:last-child {
+  border: 0;
+}

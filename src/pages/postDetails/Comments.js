@@ -14,15 +14,17 @@ const Comments = () => {
 
     return (
         <div>
-            Comments
-            {comments.map(comment => {
-                return(
-                    <div key={comment.id}>
-                        <h5>{comment.name}</h5>
-                        <p>{comment.body}</p>
-                    </div>
-                )
+            <h3>Comments</h3>
+            <div class="comments shadow">
+                {comments.map(comment => {
+                    return(
+                        <div key={comment.id} className="comment">
+                            <h4>{comment.name}</h4>
+                            <p>{comment.body}</p>
+                        </div>
+                    )
             })}
+            </div>
         </div>
     )
 }
