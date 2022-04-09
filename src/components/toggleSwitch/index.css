@@ -1,0 +1,90 @@
+:root {
+  --clr-light: #7D8997;
+  --clr-dark: #7D7D7D;
+  
+  --bg-light: #E1E6EC;
+  --bg-dark: #262626;
+  
+  --sdw-light: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+  --sdw-dark: -9px -9px 16px 0 rgba(58, 58, 58, 0.6), 9px 9px 16px 0 rgba(0,0,0,0.5);
+  
+  --transition: transform 250ms ease-in;
+  --transition-bg: background-color 250ms ease-in;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch::before {
+  content: 'Light';
+  position: absolute;
+  left: -48px;
+  top: 5px;
+}
+
+.switch::after {
+  content: 'Dark';
+  position: absolute;
+  right: -48px;
+  top: 5px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-light);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  box-shadow: var(--sdw-light);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--clr-light);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+/* active state */
+input:checked + .slider {
+  background-color: var(--bg-dark);
+  box-shadow: var(--sdw-dark);
+}
+
+input:checked + .slider:before {
+  background-color: var(--clr-dark);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* themes */
+.light {
+  color: var(--clr-light);
+}
+
+.dark {
+  color: var(--clr-dark);
+}
