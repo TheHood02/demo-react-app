@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <nav className="shadow">
-          <h1>react-router practice</h1>
+          <h1>demo-react-app</h1>
           <Link to='/'>
             <button className="link shadow-hover">Home</button>
           </Link>
