@@ -1,9 +1,17 @@
 :root {
 
-  --clr: #7D8997;
-  --bg-clr: #E1E6EC;
+  --clr-light: #7D8997;
+  --clr-dark: #7D7D7D;
+  --bg-clr-light: #E1E6EC;
+  --bg-color-dark: #262626;
 
-  --shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+  --shadow-light: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+  --shadow-dark: -9px -9px 16px 0 rgba(58, 58, 58, 0.6), 9px 9px 16px 0 rgba(0,0,0,.5);
+
+  --clr: var(--clr-light);
+  --bg-clr: var(--bg-clr-light);
+
+  --shadow: var(--shadow-light);
 }
 
 html {
@@ -17,42 +25,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-clr);
-  color: var(--clr);
+  /* background-color: var(--bg-clr); */
+  /* color: var(--clr); */
   padding: 40px;
+  transition-property: background-color; 
+  transition-duration:  200ms;
+  transition-timing-function: ease-in;
 }
 
 nav {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
   align-items: center;
   max-width: 960px;
   margin: 0 auto;
-  padding: 5px 15px;
-}
-
-nav h1 {
-  margin-right: auto;
-  padding: 15px 20px;
+  padding: 20px 25px;
 }
 
 .shadow {
   box-shadow: var(--shadow);
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .shadow-hover:hover {
   box-shadow: var(--shadow);
+  border-radius: 5px;
 }
 
 .link {
   font-family: 'Segoe UI';
   font-size: 1.35rem;
   border: none;
-  background-color: var(--bg-clr);
+  /* background-color: var(--bg-clr); */
   cursor: pointer;
   padding: 15px 25px;
-  color: var(--clr);
+  /* color: var(--clr); */
   transition: transform 200ms ease-in;
 }
 
@@ -80,7 +88,7 @@ nav h1 {
   margin: 20px 0;
   padding: 0 15px;
   text-align: initial;
-  color: var(--clr);
+  /* color: var(--clr); */
   text-decoration: none;
 }
 

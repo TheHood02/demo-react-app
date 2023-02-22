@@ -12,7 +12,7 @@ const PostDetails = () => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then(response => response.json())
       .then(resultJSON => setPostDetails(resultJSON))
-  }, [id])
+  }, [])
 
   const toggleShowComments = () => {
     setShowComments(prevState => !prevState);
