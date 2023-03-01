@@ -54,6 +54,7 @@ nav h1 {
   padding: 15px 25px;
   color: var(--clr);
   transition: transform 200ms ease-in;
+  border-radius: 4px;
 }
 
 .link:hover {
