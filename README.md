@@ -5,3 +5,7 @@
 - neumorphism ui design
 - context provider for light/dark mode
 - custom hooks
+
+## how to run this project:
+1. Install the packages, using npm: `npm install`, using yarn: `yarn`
+2. To run the project: `npm start` or  `yarn start`
