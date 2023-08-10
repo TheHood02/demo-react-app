@@ -25,9 +25,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: var(--bg-clr); */
-  /* color: var(--clr); */
-  padding: 40px;
+  background-color: var(--bg-clr);
+  color: var(--clr);
   transition-property: background-color; 
   transition-duration:  200ms;
   transition-timing-function: ease-in;
@@ -57,10 +56,10 @@ nav {
   font-family: 'Segoe UI';
   font-size: 1.35rem;
   border: none;
-  /* background-color: var(--bg-clr); */
+  background-color: var(--bg-clr);
   cursor: pointer;
   padding: 15px 25px;
-  /* color: var(--clr); */
+  color: var(--clr);
   transition: transform 200ms ease-in;
 }
 
@@ -88,7 +87,7 @@ nav {
   margin: 20px 0;
   padding: 0 15px;
   text-align: initial;
-  /* color: var(--clr); */
+  color: var(--clr);
   text-decoration: none;
 }
 
