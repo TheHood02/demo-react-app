@@ -14,6 +14,12 @@
   --shadow: var(--shadow-light);
 }
 
+* {
+  transition-property: background-color box-shadow; 
+  transition-duration:  200ms;
+  transition-timing-function: ease-in;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -27,9 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-clr);
   color: var(--clr);
-  transition-property: background-color; 
-  transition-duration:  200ms;
-  transition-timing-function: ease-in;
 }
 
 nav {
@@ -60,7 +63,7 @@ nav {
   cursor: pointer;
   padding: 15px 25px;
   color: var(--clr);
-  transition: transform 200ms ease-in;
+  transition: transform background-color 200ms ease-in;
 }
 
 .link:hover {
